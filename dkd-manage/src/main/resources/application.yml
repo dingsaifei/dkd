@@ -1,0 +1,21 @@
+minio:
+  # minio地址+端口号
+  endpoint: http://192.168.146.129:9000
+  # minio用户名
+  accessKey: minioadmin
+  # minio密码
+  secretKey: minioadmin
+  # 存储桶名称
+  bucketName: dkd
+  # 上传文件大小限制
+  maxFileSize: 104857600 # 10MB
+  # 上传文件数量限制
+  maxRequestSize: 104857600 # 10MB
+  logging:
+    level:
+      com.dsf.minio: DEBUG
+Spring:
+  servlet:
+    multipart:
+      max-file-size: 104857600 # 10MB
+      max-request-size: 104857600 # 10MB
